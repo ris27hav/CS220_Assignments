@@ -1,14 +1,15 @@
-`include "priority_logic.v"
+// `include "priority_logic.v"
 `include "eight_to_three_priority.v"
 
-module testbench;
+module testbench();
     reg [7:0]a;
     wire [2:0]b;
 
-    eight_to_three_priority D1(a,b);
+    eight_to_three_priority_logic D1(a,b);
 
     initial begin
         $monitor($time, " a = %b, b = %b",a,b);
-        #5 a=8'b11000000;
+        a=8'b11000000;
+        #5 a=8'b00001000;
     end
 endmodule
