@@ -15,13 +15,6 @@ module eight_to_three_priority(a,c);
     priority_logic D7(a[6],p[5],b[17:15],b[20:18],p[6]);
     priority_logic D8(a[7],p[6],b[20:18],b[23:21],p[7]);
 
-//     assign c = b[23:21];
+    assign c = b[23:21];
 
-// endmodule
-
-module eight_to_three_priority_logic(a,b);
-    input [7:0]a;
-    output [2:0]b;
-    
-    assign b = (a[0]==1'b1)?3'b000:(a[1]==1'b1)?3'b001:(a[2]==1'b1)?3'b010:(a[3]==1'b1)?3'b011:(a[4]==1'b1)?3'b100:(a[5]==1'b1)?3'b101:(a[6]==1'b1)?3'b110:(a[7]==1'b1)?3'b111:3'bxxx;
 endmodule
