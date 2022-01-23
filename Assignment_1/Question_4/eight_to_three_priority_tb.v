@@ -9,7 +9,10 @@ module testbench();
 
     initial begin
         $monitor($time, " a = %b, b = %b",a,b);
-        a=8'b11000000;
-        #5 a=8'b00001000;
+        #5 a=8'b11000000;
+        #5 a=8'b11000001;
+        #5 a=8'b01001100;
+        #5 a=8'b00100000;
+        #5 a=8'b11000111;
     end
 endmodule
