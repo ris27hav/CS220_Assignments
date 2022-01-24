@@ -1,5 +1,5 @@
-`include "eight_bit_comparator.v"
-`include "one_bit_comparator.v"
+`include "A1Q2_eight_bit_comparator.v"
+`include "A1Q2_one_bit_comparator.v"
 
 module eight_bit_comparator_tb;
     reg [7:0]a;
@@ -14,7 +14,7 @@ module eight_bit_comparator_tb;
     initial
         begin
             $monitor( $time, " A = %b, B = %b, greater = %b, equal = %b, less = %b",a,b,greater,equal,less);
-            #5 a=47; b = 47;
+            a=47; b = 47;
             #5 a=74; b = 24;
             #5 a=253; b = 28;
             #5 a=7; b = 8;

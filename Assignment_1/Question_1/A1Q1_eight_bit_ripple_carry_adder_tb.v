@@ -1,5 +1,5 @@
-`include "eight_bit_ripple_carry_adder.v"
-`include "one_bit_full_adder.v"
+`include "A1Q1_eight_bit_ripple_carry_adder.v"
+`include "A1Q1_one_bit_full_adder.v"
 
 module eight_bit_ripple_carry_adder_tb;
     reg [7:0]a;
@@ -13,7 +13,7 @@ module eight_bit_ripple_carry_adder_tb;
 
     initial
         begin
-            $monitor( $time, "A = %b, B = %b, Carry_in = %b, Sum = %b, Carry_out = %b",a,b,cin,sum,cout);
+            $monitor( $time, " A = %b, B = %b, Carry_in = %b, Sum = %b, Carry_out = %b",a,b,cin,sum,cout);
             a=8; b=8; cin=0;
             #5 a=23; b=47; cin=0;
             #5 a=39; b=68; cin=0;
