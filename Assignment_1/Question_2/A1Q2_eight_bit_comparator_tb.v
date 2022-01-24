@@ -1,7 +1,7 @@
 `include "eight_bit_comparator.v"
 `include "one_bit_comparator.v"
 
-module testbench;
+module eight_bit_comparator_tb;
     reg [7:0]a;
     reg [7:0]b;
 
