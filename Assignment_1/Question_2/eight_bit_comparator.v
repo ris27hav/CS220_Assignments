@@ -11,7 +11,7 @@ module eight_bit_comparator(a,b,g,e,s);
 
 
     // Logic
-    one_bit_comparator D1(a[7],b[7],0,1,0,greater[7],equal[7],smaller[7]);
+    one_bit_comparator D1(a[7],b[7],1'b0,1'b1,1'b0,greater[7],equal[7],smaller[7]);
     one_bit_comparator D2(a[6],b[6],greater[7],equal[7],smaller[7],greater[6],equal[6],smaller[6]);
     one_bit_comparator D3(a[5],b[5],greater[6],equal[6],smaller[6],greater[5],equal[5],smaller[5]);
     one_bit_comparator D4(a[4],b[4],greater[5],equal[5],smaller[5],greater[4],equal[4],smaller[4]);
