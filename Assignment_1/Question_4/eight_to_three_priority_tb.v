@@ -1,7 +1,7 @@
 `include "priority_logic.v"
 `include "eight_to_three_priority.v"
 
-module testbench;
+module testbench();
     reg [7:0]a;
     wire [2:0]b;
 
