@@ -7,9 +7,12 @@ module priority_logic(a, pp, b, c, pc);
     output pc;
 
     initial begin
-        if(pp === 1)begin
+        if(pp === 0)begin
             c = b+3'b001;
         end
+        else begin
+            c=b;
+        end
     end
-    assign pc = (~pp&a)||pp;
+    assign pc = a||pp;
 endmodule
