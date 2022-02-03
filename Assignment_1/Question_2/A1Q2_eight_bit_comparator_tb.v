@@ -1,7 +1,7 @@
-`include "eight_bit_comparator.v"
-`include "one_bit_comparator.v"
+`include "A1Q2_eight_bit_comparator.v"
+`include "A1Q2_one_bit_comparator.v"
 
-module testbench;
+module eight_bit_comparator_tb;
     reg [7:0]a;
     reg [7:0]b;
 
@@ -11,14 +11,10 @@ module testbench;
 
     eight_bit_comparator D1(a,b,greater,equal,less);
 
-    always @(a or b) begin
-        $monitor( $time, " A = %b , B = %b , greater = %b , equal = %b , less  = %b \n",a,b,greater,equal,less);
-    end
-
     initial
         begin
-            // $monitor($time," greater = %d, equal = %d, smaller = %d",greater,equal,less);
-            #5 a=47; b = 47;
+            $monitor( $time, " A = %b, B = %b, greater = %b, equal = %b, less = %b",a,b,greater,equal,less);
+            a=47; b = 47;
             #5 a=74; b = 24;
             #5 a=253; b = 28;
             #5 a=7; b = 8;

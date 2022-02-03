@@ -1,4 +1,4 @@
-module four_to_eight_decoder(a, b, c, o1, o2, o3, o4, o5, o6, o7, o8);
+module three_to_eight_decoder(a, b, c, o1, o2, o3, o4, o5, o6, o7, o8);
     input a;
     input b;
     input c;

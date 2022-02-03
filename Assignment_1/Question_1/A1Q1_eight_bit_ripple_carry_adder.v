@@ -7,8 +7,8 @@ module eight_bit_ripple_carry_adder(a,b,cin,cout,sum);
     output cout;
     wire [6:0] carry;
 
-    // Instanciating eight one bit full adder
-    one_bit_full_adder D1(a[0],b[0],0,sum[0],carry[0]);
+    // Instantiating eight one bit full adder
+    one_bit_full_adder D1(a[0],b[0],cin,sum[0],carry[0]);
     one_bit_full_adder D2(a[1],b[1],carry[0],sum[1],carry[1]);
     one_bit_full_adder D3(a[2],b[2],carry[1],sum[2],carry[2]);
     one_bit_full_adder D4(a[3],b[3],carry[2],sum[3],carry[3]);
