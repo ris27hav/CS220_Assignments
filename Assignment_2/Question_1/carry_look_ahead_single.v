@@ -1,4 +1,4 @@
-module carry_look_ahead_single(a,b,cin,s,cout);
+module carry_look_ahead_single(a,b,cin,s);
     // input
     input a;
     input b;
@@ -6,18 +6,7 @@ module carry_look_ahead_single(a,b,cin,s,cout);
 
     // output
     output s;
-    output cout;
-    
-    // wires
-    wire c;
-    wire d;
-    wire e;
 
     // Combinational logic
-    assign c = a^b;
-    assign s = c^cin;
-    assign d = cin && c;
-    assign e = a && b;
-    assign cout = d || e;
-
+    assign s = a^b^cin;
 endmodule
