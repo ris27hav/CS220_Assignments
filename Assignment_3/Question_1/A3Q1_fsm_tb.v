@@ -1,4 +1,4 @@
-`include "FSM_driver.v"
+`include "A3Q1_fsm_driver.v"
 
 module FSM_tb;
     reg [7:0]a;

@@ -1,4 +1,4 @@
-`include "FSM.v"
+`include "A3Q1_fsm_sub.v"
 module fsm_driver(a,c);
 
 input [7:0]a;

@@ -1,4 +1,4 @@
-module parity(a, p);
+module fsm_driver(a, p);
     input [2:0] a;
     output p;
     wire [2:0] temp;

@@ -1,10 +1,10 @@
-`include "FSM.v"
-`include "FSM_driver.v"
+`include "A3Q2_fsm.v"
+`include "A3Q2_fsm_driver.v"
 
 module tb();
     reg [2:0] a;
     wire p;
-    parity p1(a,p);
+    fsm_driver p1(a,p);
     initial
         begin
             $monitor("time=%0d, A = %b, P = %b", $time,a,p);
