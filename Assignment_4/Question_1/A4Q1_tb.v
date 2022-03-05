@@ -1,9 +1,9 @@
 `include "A4Q1_fsm.v"
 
 module tb();
-    reg [7:0] in;
+    reg in;
     reg [2:0] state;
-    wire [7:0] out;
+    wire out;
 
     fsm
 endmodule

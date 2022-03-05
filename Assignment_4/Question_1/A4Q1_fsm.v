@@ -1,13 +1,12 @@
-module fsm(in, is, fs, op);
+module fsm(in, state, op);
     input in;
-    input [2:0]is;
-    output [2:0]fs;
+    inout [2:0]state;
     output op;
 
     parameter S0=3'b000, S1=3'b001, S2=3'b011, S3=3'b010, S4=3'b110, S5=3'b111, S6=3'b101, S7=3'b100;
     always @* begin
         op=1'b0;
-        case(is)
+        case(state)
             S0: begin
                 if(in==1'b0)begin
                     fs=is;
