@@ -1,4 +1,4 @@
-`include "A4Q1_fsm.v"
+`include "A4Q1_fsm_driver.v"
 
 module tb();
     reg in;

@@ -73,7 +73,7 @@ module fsm(in, state, op);
                 end
             end
             default: begin
-                fs=is;
+                fs=S0;
             end
         endcase
     end
